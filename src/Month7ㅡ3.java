@@ -1,15 +1,15 @@
 
-public class Month7¤Ñ3 extends Month{
+public class Month7ã…¡3 extends Month{
 	
 	private int BasicScore = 0 ;
 	public int getScore(){
 		return (BasicScore+1);
 	}
 	public void print(){
-		System.out.print("7¿ùÃÊ´Ü");
+		System.out.print("7ì›”ì´ˆë‹¨");
 	}
 	public int getdistinct(){
-		return 7;//7 ÃÊ´Ü
+		return 7;//7 ì´ˆë‹¨
 	}
 
 }

@@ -3,166 +3,166 @@ import java.util.Random;
 public class GostopTest {
 
 	public static void random(int a){
-		/////////////1ฟ๙
+		/////////////1์”
 		if(a==1){
-			Month1คั1 oneone = new Month1คั1();
+			Month1ใ…ก1 oneone = new Month1ใ…ก1();
 		}
 		else if(a==2){
-			Month1คั2 onetwo = new Month1คั2();
+			Month1ใ…ก2 onetwo = new Month1ใ…ก2();
 		}
 		else if(a==3){
-			Month1คั3 onethree = new Month1คั3();
+			Month1ใ…ก3 onethree = new Month1ใ…ก3();
 		}
 		else if(a==4){
-			Month1คั4 onefour = new Month1คั4();
+			Month1ใ…ก4 onefour = new Month1ใ…ก4();
 		}
-		//////////////2ฟ๙
+		//////////////2์”
 		else if(a==5){
-			Month2คั1 twoone = new Month2คั1();
+			Month2ใ…ก1 twoone = new Month2ใ…ก1();
 		}
 		else if(a==6){
-			Month2คั2 twotwo = new Month2คั2();
+			Month2ใ…ก2 twotwo = new Month2ใ…ก2();
 		}
 		else if(a==7){
-			Month2คั3 twothree = new Month2คั3();
+			Month2ใ…ก3 twothree = new Month2ใ…ก3();
 		}
 		else if(a==8){
-			Month2คั4 twofour = new Month2คั4();
+			Month2ใ…ก4 twofour = new Month2ใ…ก4();
 		}
-		//////////////3ฟ๙
+		//////////////3์”
 		else if(a==9){
-			Month3คั1 threeone = new Month3คั1();
+			Month3ใ…ก1 threeone = new Month3ใ…ก1();
 		}
 		else if(a==10){
-			Month3คั2 threetwo = new Month3คั2();
+			Month3ใ…ก2 threetwo = new Month3ใ…ก2();
 		}
 		else if(a==11){
-			Month3คั3 threethree = new Month3คั3();
+			Month3ใ…ก3 threethree = new Month3ใ…ก3();
 		}
 		else if(a==12){
-			Month3คั4 threefour = new Month3คั4();
+			Month3ใ…ก4 threefour = new Month3ใ…ก4();
 		}
-		//////////////4ฟ๙
+		//////////////4์”
 		else if(a==13){
-			Month4คั1 fourone = new Month4คั1();
+			Month4ใ…ก1 fourone = new Month4ใ…ก1();
 		}
 		else if(a==14){
-			Month4คั2 fourtwo = new Month4คั2();
+			Month4ใ…ก2 fourtwo = new Month4ใ…ก2();
 		}
 		else if(a==15){
-			Month4คั3 fourthree = new Month4คั3();
+			Month4ใ…ก3 fourthree = new Month4ใ…ก3();
 		}
 		else if(a==16){
-			Month4คั4 fourfour = new Month4คั4();
+			Month4ใ…ก4 fourfour = new Month4ใ…ก4();
 		}
-		//////////////5ฟ๙
+		//////////////5์”
 		else if(a==17){
-			Month5คั1 fiveone = new Month5คั1();
+			Month5ใ…ก1 fiveone = new Month5ใ…ก1();
 		}
 		else if(a==18){
-			Month5คั2 fivetwo = new Month5คั2();
+			Month5ใ…ก2 fivetwo = new Month5ใ…ก2();
 		}
 		else if(a==19){
-			Month5คั3 fivethree = new Month5คั3();
+			Month5ใ…ก3 fivethree = new Month5ใ…ก3();
 		}
 		else if(a==20){
-			Month5คั4 fivefour = new Month5คั4();
+			Month5ใ…ก4 fivefour = new Month5ใ…ก4();
 		}
-		//////////////6ฟ๙
+		//////////////6์”
 		else if(a==21){
-			Month6คั1 sixone = new Month6คั1();
+			Month6ใ…ก1 sixone = new Month6ใ…ก1();
 		}
 		else if(a==22){
-			Month6คั2 sixtwo = new Month6คั2();
+			Month6ใ…ก2 sixtwo = new Month6ใ…ก2();
 		}
 		else if(a==23){
-			Month6คั3 sixthree = new Month6คั3();
+			Month6ใ…ก3 sixthree = new Month6ใ…ก3();
 		}
 		else if(a==24){
-			Month6คั4 sixfour = new Month6คั4();
+			Month6ใ…ก4 sixfour = new Month6ใ…ก4();
 		}
-		//////////////7ฟ๙
+		//////////////7์”
 		else if(a==25){
-			Month7คั1 sevenone = new Month7คั1();
+			Month7ใ…ก1 sevenone = new Month7ใ…ก1();
 		}
 		else if(a==26){
-			Month7คั2 seventwo = new Month7คั2();
+			Month7ใ…ก2 seventwo = new Month7ใ…ก2();
 		}
 		else if(a==27){
-			Month7คั3 seventhree = new Month7คั3();
+			Month7ใ…ก3 seventhree = new Month7ใ…ก3();
 		}
 		else if(a==28){
-			Month7คั4 sevenfour = new Month7คั4();
+			Month7ใ…ก4 sevenfour = new Month7ใ…ก4();
 		}
-		//////////////8ฟ๙
+		//////////////8์”
 		else if(a==29){
-			Month8คั1 eightone = new Month8คั1();
+			Month8ใ…ก1 eightone = new Month8ใ…ก1();
 		}
 		else if(a==30){
-			Month8คั2 eighttwo = new Month8คั2();
+			Month8ใ…ก2 eighttwo = new Month8ใ…ก2();
 		}
 		else if(a==31){
-			Month8คั3 eightthree = new Month8คั3();
+			Month8ใ…ก3 eightthree = new Month8ใ…ก3();
 		}
 		else if(a==32){
-			Month8คั4 eightfour = new Month8คั4();
+			Month8ใ…ก4 eightfour = new Month8ใ…ก4();
 		}
-		//////////////9ฟ๙
+		//////////////9์”
 		else if(a==33){
-			Month9คั1 nineone = new Month9คั1();
+			Month9ใ…ก1 nineone = new Month9ใ…ก1();
 		}
 		else if(a==34){
-			Month9คั2 ninetwo = new Month9คั2();
+			Month9ใ…ก2 ninetwo = new Month9ใ…ก2();
 		}
 		else if(a==35){
-			Month9คั3 ninethree = new Month9คั3();
+			Month9ใ…ก3 ninethree = new Month9ใ…ก3();
 		}
 		else if(a==36){
-			Month9คั4 ninefour = new Month9คั4();
+			Month9ใ…ก4 ninefour = new Month9ใ…ก4();
 		}
-		//////////////10ฟ๙
+		//////////////10์”
 		else if(a==37){
-			Month10คั1 tenone = new Month10คั1();
+			Month10ใ…ก1 tenone = new Month10ใ…ก1();
 		}
 		else if(a==38){
-			Month10คั2 tentwo = new Month10คั2();
+			Month10ใ…ก2 tentwo = new Month10ใ…ก2();
 		}
 		else if(a==39){
-			Month10คั3 tenthree = new Month10คั3();
+			Month10ใ…ก3 tenthree = new Month10ใ…ก3();
 		}
 		else if(a==40){
-			Month10คั4 tenfour = new Month10คั4();
+			Month10ใ…ก4 tenfour = new Month10ใ…ก4();
 		}
-		//////////////11ฟ๙
+		//////////////11์”
 		else if(a==41){
-			Month11คั1 elevenone = new Month11คั1();
+			Month11ใ…ก1 elevenone = new Month11ใ…ก1();
 		}
 		else if(a==42){
-			Month11คั2 eleventwo = new Month11คั2();
+			Month11ใ…ก2 eleventwo = new Month11ใ…ก2();
 		}
 		else if(a==43){
-			Month11คั3 eleventhree = new Month11คั3();
+			Month11ใ…ก3 eleventhree = new Month11ใ…ก3();
 		}
 		else if(a==44){
-			Month11คั4 elevenfour = new Month11คั4();
+			Month11ใ…ก4 elevenfour = new Month11ใ…ก4();
 		}
-		//////////////12ฟ๙
+		//////////////12์”
 		else if(a==45){
-			Month12คั1 twelveone = new Month12คั1();
+			Month12ใ…ก1 twelveone = new Month12ใ…ก1();
 		}
 		else if(a==46){
-			Month12คั2 twelvetwo = new Month12คั2();
+			Month12ใ…ก2 twelvetwo = new Month12ใ…ก2();
 		}
 		else if(a==47){
-			Month12คั3 twelvethree = new Month12คั3();
+			Month12ใ…ก3 twelvethree = new Month12ใ…ก3();
 		}
 		else if(a==48){
-			Month12คั4 twelvefour = new Month12คั4();
+			Month12ใ…ก4 twelvefour = new Month12ใ…ก4();
 		}
 	}
 		public static void main(String[] args){
 			Random random = new Random();
-			int a = random.nextInt(48); //ทฃดýบฏผ๖
+			int a = random.nextInt(47)+1; //๋๋ค๋ณ€์
 			Month month = new Month();
 			month random(a);
 
