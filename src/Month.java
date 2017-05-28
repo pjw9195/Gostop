@@ -185,6 +185,58 @@ public class Month {
 		}
 
 	}
+	public int division(){
+
+		/////////////1월
+		if(a>0 && a<5){
+			return 1;
+		}
+		//////////////2월
+		else if(a>4 && a<9){
+			return 2;
+		}
+		//////////////3월
+		else if(a>8 && a<13){
+			return 3;
+		}
+		//////////////4월
+		else if(a>12 && a<17){
+			return 4;
+		}
+		//////////////5월
+		else if(a>16 && a<21){
+			return 5;
+		}
+		//////////////6월
+		else if(a>20&& a<25){
+			return 6;
+		}
+		//////////////7월
+		else if(a >24 && a<29){
+			return 7;
+		}
+		//////////////8월
+		else if(a >28 && a<33){
+			return 8;
+		}
+		//////////////9월
+		else if(a>32 && a<37){
+			return 9;
+		}
+		//////////////10월
+		else if(a>36 && a<41){
+			return 10;
+		}
+		//////////////11월
+		else if(a>40 && a<45){
+			return 11;
+		}
+		//////////////12월
+		else {
+			return 12;
+		}
+	}
+	/////////월 구별
 	public void print(){
 
 		/////////////1월
