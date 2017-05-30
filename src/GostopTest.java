@@ -4,27 +4,31 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class GostopTest {
+	
 	//List
 	static List<Month> centerlist = new ArrayList<Month>();
 	static List<Month> player1list = new ArrayList<Month>();
 	static List<Month> player2list = new ArrayList<Month>();
 	static List<Month> player1panlist = new ArrayList<Month>();
 	static List<Month> player2panlist = new ArrayList<Month>();
-	protected static int b = 0;
-	protected static int Xrandom[] = new int[48];
+	private static int b = 0; // 랜덤함수 Count 함수..
+	private static int Xrandom[] = new int[48];
+	private static int player1ts = 0; ////playertotalscore
+	private static int player2ts = 0;
 	/////////// player1 점수측정
 	public static int player1Score(){
-		 int TotalBasicScore = 0;
-		 int TotalGodori =0;
-		 int TotalBlue = 0;
-		 int TotalRed = 0;
-		 int TotalCho = 0 ;
-		 int TotalLight = 0;
-		 int TotalAnimal = 0;
-		 int TotalDan = 0;
-		 int TotalBiLight = 0;
-		 int TotalScore = 0;
-		 for(int i = 0; i<player1panlist.size(); i++){
+
+		int TotalBasicScore = 0;
+		int TotalGodori =0;
+		int TotalBlue = 0;
+		int TotalRed = 0;
+		int TotalCho = 0 ;
+		int TotalLight = 0;
+		int TotalAnimal = 0;
+		int TotalDan = 0;
+		int TotalBiLight = 0;
+		int TotalScore = 0;
+		for(int i = 0; i<player1panlist.size(); i++){
 			Month playerpanl1 = player1panlist.get(i);
 			TotalBasicScore = TotalBasicScore + playerpanl1.BasicScore;
 			TotalGodori = TotalGodori + playerpanl1.Godori;
@@ -63,22 +67,24 @@ public class GostopTest {
 		if(TotalDan > 4){ //5 and 6 and 7
 			TotalScore = TotalScore + TotalDan - 4;
 		}
+
 		return TotalScore;
 
 	}
 	//player2 점수측정
 	public static int player2Score(){
-		 int TotalBasicScore = 0;
-		 int TotalGodori =0;
-		 int TotalBlue = 0;
-		 int TotalRed = 0;
-		 int TotalCho = 0 ;
-		 int TotalLight = 0;
-		 int TotalAnimal = 0;
-		 int TotalDan = 0;
-		 int TotalBiLight = 0;
-		 int TotalScore = 0;
-		 for(int i = 0; i<player2panlist.size(); i++){
+
+		int TotalBasicScore = 0;
+		int TotalGodori =0;
+		int TotalBlue = 0;
+		int TotalRed = 0;
+		int TotalCho = 0 ;
+		int TotalLight = 0;
+		int TotalAnimal = 0;
+		int TotalDan = 0;
+		int TotalBiLight = 0;
+		int TotalScore = 0;
+		for(int i = 0; i<player2panlist.size(); i++){
 			Month playerpanl2 = player2panlist.get(i);
 			TotalBasicScore = TotalBasicScore + playerpanl2.BasicScore;
 			TotalGodori = TotalGodori + playerpanl2.Godori;
@@ -117,6 +123,8 @@ public class GostopTest {
 		if(TotalDan > 4){ //5 and 6 and 7
 			TotalScore = TotalScore + TotalDan - 4;
 		}
+
+
 		return TotalScore;
 
 	}
@@ -146,6 +154,7 @@ public class GostopTest {
 	}
 	///////////// List프린트함수
 	public static void print(){ 
+		Scanner sc = new Scanner(System.in);
 
 		System.out.printf("center : ");
 		for(int i = 0; i<centerlist.size(); i++){
@@ -168,7 +177,7 @@ public class GostopTest {
 		}
 		System.out.printf("\n");
 		System.out.printf("player 1 Score : %d \n" , player1Score());
-		
+
 		System.out.printf("\n");
 		System.out.printf("player2 : ");
 		for(int i = 0; i<player2list.size(); i++){
@@ -183,7 +192,39 @@ public class GostopTest {
 			playerpanl1.print();
 		}
 		System.out.printf("\n");
+
 		System.out.printf("player 2 Score : %d \n" , player2Score());
+		/////////////////////
+		if(player1Score() > 6){ //Go stop
+			System.out.printf("\n palyer1: 1. Go 2. Stop");
+			int select = sc.nextInt();
+
+			player1ts = player1ts + player1Score();
+
+			if(select == 1){
+				player1ts = player1ts + player1Score();
+			}
+			else{
+				System.out.printf("\n Total Score : %d " , player1ts);
+				System.out.printf("\n player1 win ");
+				System.exit(0);
+			}
+		}
+
+		if(player2Score() > 6){ // Go stop
+			System.out.printf("\n palyer2: 1. Go 2. Stop");
+			int select = sc.nextInt();
+			player2ts = player2ts + player2Score();
+
+			if(select == 1){
+				player2ts = player2ts + player2Score();
+			}
+			else{
+				System.out.printf("\n Total Score : %d " , player2ts);
+				System.out.printf("\n player2 win ");
+				System.exit(0);
+			}
+		}
 	}
 	//center패 한장 까지고 그 중에 같은월 있으면 가져온다.
 	public static void center1(){
@@ -191,6 +232,7 @@ public class GostopTest {
 		Month card = new Month();
 		int count = Count();
 		card.Card(count);
+
 		for(int i = 0; i<centerlist.size(); i++){
 			Month centerl1 = centerlist.get(i);
 			if(card.division() == centerl1.division()){
@@ -204,13 +246,15 @@ public class GostopTest {
 				break;
 			}
 		}
-		
+
+
 	}
 	public static void center2(){
 		//패한장생성
 		Month card = new Month();
 		int count = Count();
 		card.Card(count);
+
 		for(int i = 0; i<centerlist.size(); i++){
 			Month centerl1 = centerlist.get(i);
 			if(card.division() == centerl1.division()){
@@ -224,12 +268,40 @@ public class GostopTest {
 				break;
 			}
 		}
-		
+	}
+	public static int distinct1(){ //hand와 center의 같은 월이 없는 조건
+		for(int i = 0; i<centerlist.size(); i++){
+			Month centerl1 = centerlist.get(i);
+			for(int j = 0 ; j< player1list.size(); j++){
+				Month playerl1 = player1list.get(j);
+				if(centerl1.division() == playerl1.division()){
+					return 1; //1이면 같은게있고
+				}
+			}
+		}
+		return 2;
+		//2면 같은게없음
+	}
+	public static int distinct2(){
+		for(int i = 0; i<centerlist.size(); i++){
+			Month centerl2 = centerlist.get(i);
+			for(int j = 0 ; j< player2list.size(); j++){
+				Month playerl2 = player2list.get(j);
+				if(centerl2.division() == playerl2.division()){
+					return 1; //1이면 같은게있고
+				}
+			}
+		}
+		return 2;
+		//2면 같은게없음
 	}
 
 	public static void main(String[] args){
-		Scanner sc = new Scanner(System.in);
 		////처음
+		Scanner sc = new Scanner(System.in);
+		int centerhand = 0;
+		int playerhand = 0;
+		int distinct = 0;
 		for(int i= 0; i<7;i++){
 			Month card = new Month();
 			int count = Count();
@@ -254,40 +326,83 @@ public class GostopTest {
 
 		//패 옮기고 삭제하기
 		while(true){
-			System.out.printf("\n");
-			System.out.printf("player1 turn");
-			System.out.printf("\n");
-			System.out.printf("center몇번째패?");
-			int centerhand = sc.nextInt();
-			System.out.printf("player1몇번째패?");
-			int playerhand = sc.nextInt();
+			distinct = distinct1();
 
-			Month centerl = centerlist.get(centerhand);
-			Month playerl = player1list.get(playerhand);
-			player1panlist.add(centerl);
-			player1panlist.add(playerl);
-			centerlist.remove(centerhand);
-			player1list.remove(centerhand);
+			if(distinct == 1){
+				System.out.printf("\n");
+				System.out.printf("player1 turn");
+				System.out.printf("\n");
+				System.out.printf("center몇번째패?");
+				centerhand = sc.nextInt();
+				System.out.printf("player1몇번째패?");
+				playerhand = sc.nextInt();
+
+
+				if(centerlist != null){ // center 패가 없을때를 위한 if문
+					Month center1 = centerlist.get(centerhand);
+					player1panlist.add(center1);
+					centerlist.remove(centerhand);
+
+					Month player1 = player1list.get(playerhand);
+					player1panlist.add(player1);
+					player1list.remove(playerhand);
+				}
+				else if(centerlist == null){
+					Month player1 = player1list.get(playerhand);
+					player2panlist.add(player1);
+					centerlist.add(player1);
+				}
+			}
+			else if(distinct == 2){
+				System.out.printf("player1몇번째패?");
+				playerhand = sc.nextInt();
+
+				Month player1 = player1list.get(playerhand);
+				centerlist.add(player1);
+				player1list.remove(playerhand);
+			}
+
 			center1();
 			print();
-			
-			System.out.printf("player2 turn");
-			System.out.printf("\n");
-			System.out.printf("center몇번째패?");
-			int centerhand2 = sc.nextInt();
-			System.out.printf("player2몇번째패?");
-			int playerhand2 = sc.nextInt();
 
-			Month center2 = centerlist.get(centerhand2);
-			Month player2 = player1list.get(playerhand2);
-			player2panlist.add(center2);
-			player2panlist.add(player2);
-			centerlist.remove(centerhand);
-			player2list.remove(centerhand);
+
+			distinct = distinct2();
+			
+			if(distinct == 1){
+
+				System.out.printf("player2 turn");
+				System.out.printf("\n");
+				System.out.printf("center몇번째패?");
+				centerhand = sc.nextInt();
+				System.out.printf("player2몇번째패?");
+				playerhand = sc.nextInt();
+
+				if(centerlist != null){ // center 패가 없을때를 위한 if문
+					Month center2 = centerlist.get(centerhand);
+					player2panlist.add(center2);
+					centerlist.remove(centerhand);
+
+					Month player2 = player2list.get(playerhand);
+					player2panlist.add(player2);
+					player2list.remove(playerhand);
+				}
+				else if(centerlist == null){
+					Month player2 = player2list.get(playerhand);
+					centerlist.add(player2);
+					player2list.remove(playerhand);
+				}
+			}
+			else if(distinct == 2){
+				System.out.printf("player2몇번째패?");
+				playerhand = sc.nextInt();
+
+				Month player2 = player2list.get(playerhand);
+				centerlist.add(player2);
+				player2list.remove(playerhand);
+			}
 			center2();
 			print();
-			//center패 한장오픈
-			
+
 		}
 	}
 }
