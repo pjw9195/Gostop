@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class GostopTest {
-	
+
 	//List
 	static List<Month> centerlist = new ArrayList<Month>();
 	static List<Month> player1list = new ArrayList<Month>();
@@ -15,6 +15,8 @@ public class GostopTest {
 	private static int Xrandom[] = new int[48];
 	private static int player1ts = 0; ////playertotalscore
 	private static int player2ts = 0;
+	private static int player1ps = 0; ////pastscore
+	private static int player2ps = 0;
 	/////////// player1 점수측정
 	public static int player1Score(){
 
@@ -195,14 +197,21 @@ public class GostopTest {
 
 		System.out.printf("player 2 Score : %d \n" , player2Score());
 		/////////////////////
-		if(player1Score() > 6){ //Go stop
+		if(player1Score() > 6 && player1ps !=player1Score()){ //Go stop (Two GO까지만 구현)
 			System.out.printf("\n palyer1: 1. Go 2. Stop");
 			int select = sc.nextInt();
 
-			player1ts = player1ts + player1Score();
+			player1ts = player1Score();
 
 			if(select == 1){
-				player1ts = player1ts + player1Score();
+				if(player1ts == 1){
+					System.out.print("\n player1: Two go");
+				}
+				else if(player1ts == 0){
+
+					System.out.print("\n player1: one go");
+				}
+				player1ts = player1ts + 1;
 			}
 			else{
 				System.out.printf("\n Total Score : %d " , player1ts);
@@ -210,14 +219,22 @@ public class GostopTest {
 				System.exit(0);
 			}
 		}
+		player1ps = player1Score();
 
-		if(player2Score() > 6){ // Go stop
+		if(player2Score() > 6 && player2ps !=player2Score()){ // Go stop
 			System.out.printf("\n palyer2: 1. Go 2. Stop");
 			int select = sc.nextInt();
-			player2ts = player2ts + player2Score();
+			player2ts = player2Score();
 
 			if(select == 1){
-				player2ts = player2ts + player2Score();
+				if(player2ts == 1){
+					System.out.print("\n player2: Two go");
+				}
+				else if(player2ts == 0){
+
+					System.out.print("\n player2: one go");
+				}
+				player2ts = player2ts + 1;
 			}
 			else{
 				System.out.printf("\n Total Score : %d " , player2ts);
@@ -225,6 +242,7 @@ public class GostopTest {
 				System.exit(0);
 			}
 		}
+		player2ps = player2Score();
 	}
 	//center패 한장 까지고 그 중에 같은월 있으면 가져온다.
 	public static void center1(){
@@ -367,7 +385,7 @@ public class GostopTest {
 
 
 			distinct = distinct2();
-			
+
 			if(distinct == 1){
 
 				System.out.printf("player2 turn");
