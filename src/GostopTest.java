@@ -66,6 +66,7 @@ public class GostopTest {
 		return TotalScore;
 
 	}
+	//player2 점수측정
 	public static int player2Score(){
 		 int TotalBasicScore = 0;
 		 int TotalGodori =0;
