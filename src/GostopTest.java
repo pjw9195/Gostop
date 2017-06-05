@@ -200,9 +200,6 @@ public class GostopTest {
 		if(player1Score() > 6 && player1ps !=player1Score()){ //Go stop (Two GO까지만 구현)
 			System.out.printf("\n palyer1: 1. Go 2. Stop");
 			int select = sc.nextInt();
-
-			player1ts = player1Score();
-
 			if(select == 1){
 				if(player1ts == 1){
 					System.out.print("\n player1: Two go");
@@ -214,6 +211,7 @@ public class GostopTest {
 				player1ts = player1ts + 1;
 			}
 			else{
+				player1ts = player1ts + player1Score();
 				System.out.printf("\n Total Score : %d " , player1ts);
 				System.out.printf("\n player1 win ");
 				System.exit(0);
@@ -224,8 +222,6 @@ public class GostopTest {
 		if(player2Score() > 6 && player2ps !=player2Score()){ // Go stop
 			System.out.printf("\n palyer2: 1. Go 2. Stop");
 			int select = sc.nextInt();
-			player2ts = player2Score();
-
 			if(select == 1){
 				if(player2ts == 1){
 					System.out.print("\n player2: Two go");
@@ -237,6 +233,7 @@ public class GostopTest {
 				player2ts = player2ts + 1;
 			}
 			else{
+				player2ts = player2ts + player2Score();
 				System.out.printf("\n Total Score : %d " , player2ts);
 				System.out.printf("\n player2 win ");
 				System.exit(0);
@@ -345,15 +342,16 @@ public class GostopTest {
 		//패 옮기고 삭제하기
 		while(true){
 			distinct = distinct1();
-
+			System.out.printf("\n");
+			System.out.printf("player1 turn");
+			System.out.printf("\n");
+			System.out.printf("player1몇번째패?");
+			playerhand = sc.nextInt();
 			if(distinct == 1){
-				System.out.printf("\n");
-				System.out.printf("player1 turn");
-				System.out.printf("\n");
+				
 				System.out.printf("center몇번째패?");
 				centerhand = sc.nextInt();
-				System.out.printf("player1몇번째패?");
-				playerhand = sc.nextInt();
+				
 
 
 				if(centerlist != null){ // center 패가 없을때를 위한 if문
@@ -372,8 +370,6 @@ public class GostopTest {
 				}
 			}
 			else if(distinct == 2){
-				System.out.printf("player1몇번째패?");
-				playerhand = sc.nextInt();
 
 				Month player1 = player1list.get(playerhand);
 				centerlist.add(player1);
@@ -385,15 +381,15 @@ public class GostopTest {
 
 
 			distinct = distinct2();
-
+			System.out.printf("player2 turn");
+			System.out.printf("\n");
+			System.out.printf("player2몇번째패?");
+			playerhand = sc.nextInt();
+			
 			if(distinct == 1){
 
-				System.out.printf("player2 turn");
-				System.out.printf("\n");
 				System.out.printf("center몇번째패?");
 				centerhand = sc.nextInt();
-				System.out.printf("player2몇번째패?");
-				playerhand = sc.nextInt();
 
 				if(centerlist != null){ // center 패가 없을때를 위한 if문
 					Month center2 = centerlist.get(centerhand);
@@ -411,8 +407,6 @@ public class GostopTest {
 				}
 			}
 			else if(distinct == 2){
-				System.out.printf("player2몇번째패?");
-				playerhand = sc.nextInt();
 
 				Month player2 = player2list.get(playerhand);
 				centerlist.add(player2);
@@ -420,7 +414,6 @@ public class GostopTest {
 			}
 			center2();
 			print();
-
 		}
 	}
 }
